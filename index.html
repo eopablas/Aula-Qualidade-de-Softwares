@@ -15,24 +15,24 @@
 
 <body class="bg-warning-subtle text-white d-flex justify-content-center align-items-center vh-100">
 
-    <form>
+    <form id="formLogin">
         <div class="bg-dark text-center p-4 rounded-4 border border-2 p-5 w-100" style="max-width:400px;">
 
-            <h2 class="mb-4" id="title">Nome do <br>produto</h2>
+            <h2 class="mb-4" id="title">Lanchonete do<br>Bola</h2>
 
             <div class="mb-2 text-start">
-                <label class="form-label">Name</label>
-                <input class="form-control bg-dark text-white" type="text" placeholder="Name">
+                <label class="form-label">Nome</label>
+                <input id="nome" class="form-control bg-dark text-white" type="text" placeholder="Nome">
             </div>
 
             <div class="mb-2 text-start">
                 <label class="form-label">Email</label>
-                <input class="form-control bg-dark text-white" type="email" placeholder="Email">
+                <input id="email" class="form-control bg-dark text-white" type="email" placeholder="Email">
             </div>
 
             <div class="mb-5 text-start">
-                <label class="form-label">Password</label>
-                <input class="form-control bg-dark text-white" type="password" placeholder="Password">
+                <label class="form-label">Senha</label>
+                <input id="senha" class="form-control bg-dark text-white" type="password" placeholder="Senha">
             </div>
 
             <button class="btn btn-outline-light w-100">
@@ -42,5 +42,6 @@
         </div>
     </form>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
