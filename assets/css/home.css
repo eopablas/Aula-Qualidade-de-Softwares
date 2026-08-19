@@ -13,22 +13,3 @@ p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 1rem;
 }
-
-::placeholder {
-    color: #e0e0e0 !important;
-    opacity: 1;
-}
-
-.btn {
-    border-color: #EB7D00;
-}
-
-.btn-outline-light:hover {
-    background-color: #FF9100;
-    border-color: #FF9100;
-    color: black;
-}
-
-.form-control {
-    border: 2px solid #EB7D00;
-}

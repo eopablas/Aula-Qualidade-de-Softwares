@@ -1,35 +1,41 @@
-const formulario = document.getElementById("formLogin")
+const formLogin = document.getElementById("formLogin");
 
-formulario.addEventListener("submit", function(event) {
+formLogin.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-    event.preventDefault(); //impede envio automático
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value.trim();
 
-    let nome = document.getElementById("nome").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let senha = document.getElementById("senha").value.trim();
-
-    //validação do nome
-    if (nome === "" || nome.split(" ").length < 2){
-        alert("Digite seu nome completo.");
+    if (nome === "" || email === "" || senha === "") {
+        alert("Preencha todos os campos!");
         return;
     }
 
-    //validação do email
-    let emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
-    if(!emailValido.test(email)) {
-        alert("Digite um e-mail válido.");
+    // Validação de Nome e Sobrenome
+    const nomeCompleto = nome.split(/\s+/);
+
+    if (nomeCompleto.length < 2) {
+        alert("Digite seu nome e sobrenome!");
         return;
     }
 
-    //validação de senha
-    if(senha.length < 6) {
-        alert("A senga deve conter pelo menos 6 caracteres.");
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!emailValido) {
+        alert("Digite um e-mail válido!");
         return;
     }
 
-    //Caso todas as validações passem
-    alert("Login realizado com sucesso!");
+    const senhaValida = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(senha);
 
-    window.location.href = "index.html";
+    if (!senhaValida) {
+        alert("A senha deve ter pelo menos 8 caracteres, incluindo maiúscula, minúscula, número e caractere especial!");
+        return;
+    }
+
+    localStorage.setItem("nomeUsuario", nome);
+    localStorage.setItem("emailUsuario", email);
+
+    window.location.href = "home.html";
 });
