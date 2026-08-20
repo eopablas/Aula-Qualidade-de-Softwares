@@ -37,5 +37,5 @@ formLogin.addEventListener("submit", function (event) {
     localStorage.setItem("nomeUsuario", nome);
     localStorage.setItem("emailUsuario", email);
 
-    window.location.href = "home.html";
+    window.location.href = "pages/home.html";
 });

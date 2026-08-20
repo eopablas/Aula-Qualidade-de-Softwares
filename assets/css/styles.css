@@ -1,14 +1,21 @@
 body {
-    background-image: url(../images/BackgroundLanchonete.png);
+    background-image: url("../images/BackgroundLanchonete.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    background-attachment: fixed;
+    
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 1rem;
@@ -23,12 +30,21 @@ p {
     border-color: #EB7D00;
 }
 
-.btn-outline-light:hover {
-    background-color: #FF9100;
-    border-color: #FF9100;
-    color: black;
+.btn-outline-light:hover,
+.btn-outline-light:active {
+    background-color: #FF9100 !important;
+    border-color: #FF9100 !important;
+    color: black !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 .form-control {
     border: 2px solid #EB7D00;
+}
+
+.form-control:focus {
+    border-color: #EB7D00;
+    box-shadow: none;
+    outline: none;
 }
