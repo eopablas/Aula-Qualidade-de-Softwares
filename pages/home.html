@@ -12,32 +12,40 @@
 </head>
 
 <body class="bg-dark text-white">
+    <header class="header">
+        <div class="container header-conteudo">
+            <h1 class="logo">
+                <a href="home.html">Lanchonete do Bola</a>
+            </h1>
 
-    <div class="container text-center mt-5">
-        <h1>Bem-vindo!</h1>
+            <nav class="menu">
+                <a href="#" id="inicio">Ínicio</a>
+                <a href="#" id="produtos">Produtos</a>
+                <a href="#" id="perfil">Perfil</a>
+                <a href="#" id="sair">Sair</a>
+            </nav>
+        </div>
+    </header>
 
-        <h2 id="nomeUsuario"></h2>
 
-        <p>Você entrou na Lanchonete do Bola.</p>
 
-        <button class="btn btn-outline-light" onclick="sair()">
-            Sair
-        </button>
-    </div>
 
-    <script>
-        const nome = localStorage.getItem("nomeUsuario");
 
-        document.getElementById("nomeUsuario").textContent =
-            nome ? nome : "Usuário";
 
-        function sair() {
-            localStorage.removeItem("nomeUsuario");
-            localStorage.removeItem("emailUsuario");
 
-            window.location.href = "../index.html";
-        }
-    </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/home.js"></script>
 </body>
 </html>
