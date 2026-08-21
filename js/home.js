@@ -28,5 +28,4 @@ btnSair.addEventListener("click", function () {
     localStorage.removeItem("emailUsuario");
 
     window.location.href = "../index.html";
-
 });
